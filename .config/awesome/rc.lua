@@ -165,7 +165,7 @@ awful.screen.connect_for_each_screen(
         local l = awful.layout.suit -- Alias to save time :)
         -- Tag layouts
         local layouts = {
-            l.tile.left,
+            l.tile,
             l.tile.left,
             l.max,
             l.max,

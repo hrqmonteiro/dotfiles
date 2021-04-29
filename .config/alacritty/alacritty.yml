@@ -25,16 +25,16 @@ window:
   #
   # Specified in number of pixels.
   # If the position is not set, the window manager will handle the placement.
-  #position:
-  #  x: 0
-  #  y: 0
+  position:
+    x: 10
+    y: 10
 
   # Window padding (changes require restart)
   #
   # Blank space added around the window in pixels. This padding is scaled
   # by DPI and the specified value is always added at both opposing sides.
   padding:
-    x: 0
+    x: 2
     y: 0
 
   # Spread additional padding evenly around the terminal content.
@@ -135,7 +135,7 @@ font:
     style: Bold Italic
 
   # Point size
-  size: 12
+  size: 11
 
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
@@ -274,12 +274,23 @@ window.dynamic_title: true
 
 cursor:
   # Cursor style
-  #
-  # Values for `style`:
-  #   - ▇ Block
-  #   - _ Underline
-  #   - | Beam
-  style: Underline
+  style:
+    # Cursor shape
+    #
+    # Values for `shape`:
+    #   - ▇ Block
+    #   - _ Underline
+    #   - | Beam
+    shape: Beam
+
+    # Cursor blinking state
+    #
+    # Values for `blinking`:
+    #   - Never: Prevent the cursor from ever blinking
+    #   - Off: Disable blinking by default
+    #   - On: Enable blinking by default
+    #   - Always: Force the cursor to always blink
+    blinking: Always
 
   # Vi mode cursor style
   #
@@ -288,6 +299,9 @@ cursor:
   #
   # See `cursor.style` for available options.
   #vi_mode_style: None
+
+  # Cursor blinking interval in milliseconds.
+  blink_interval: 500
 
   # If this is `true`, the cursor will be rendered as a hollow box when the
   # window is not focused.
@@ -309,8 +323,9 @@ cursor:
 #   - (macOS) /bin/bash --login
 #   - (Linux/BSD) user login shell
 #   - (Windows) powershell
-#shell:
-#  program: /bin/bash
+shell:
+
+  program: /bin/zsh
 #  args:
 #    - --login
 
