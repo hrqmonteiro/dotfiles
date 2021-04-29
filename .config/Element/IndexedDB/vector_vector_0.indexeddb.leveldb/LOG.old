@@ -1,0 +1,31 @@
+2021/04/08-11:29:21.065 4e08 Reusing MANIFEST /home/hrq/.config/Element/IndexedDB/vector_vector_0.indexeddb.leveldb/MANIFEST-000001
+2021/04/08-11:29:21.095 4e08 Recovering log #276
+2021/04/08-11:29:21.245 4e08 Reusing old log /home/hrq/.config/Element/IndexedDB/vector_vector_0.indexeddb.leveldb/000276.log 
+2021/04/08-11:32:18.391 51d4 Level-0 table #289: started
+2021/04/08-11:32:18.470 51d4 Level-0 table #289: 438376 bytes OK
+2021/04/08-11:32:18.511 51d4 Delete type=0 #276
+2021/04/08-11:32:18.527 51d4 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/04/08-11:32:18.527 51d4 Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x0a\x07\x02\x04\x02\x01+\x00s\x00/\x00i\x00d\x00+\x00x\x00w\x009\x00B\x00U\x00O\x00y\x00V\x002\x00O\x00C\x00T\x00j\x00F\x00G\x00d\x00Z\x000\x00Z\x007\x00Q\x00Q\x00Z\x00h\x00B\x00p\x00t\x00h\x00l\x00d\x00F\x00Q\x00p\x00C\x00w\x00t\x00F\x00A\x01+\x00V\x00s\x00/\x00R\x00r\x00a\x003\x007\x007\x00F\x00f\x00s\x00l\x00D\x00w\x00N\x00T\x00f\x00i\x00V\x00N\x00N\x00f\x00q\x00f\x00V\x00x\x00p\x00z\x00j\x00t\x00s\x007\x00W\x00Z\x00b\x002\x00N\x00v\x00F\x007\x00V\x004' @ 1054991 : 1
+2021/04/08-11:32:18.527 51d4 Compacting 1@1 + 9@2 files
+2021/04/08-11:32:18.659 51d4 Generated table #290@1: 7508 keys, 2153135 bytes
+2021/04/08-11:32:18.826 51d4 Generated table #291@1: 10456 keys, 2156819 bytes
+2021/04/08-11:32:18.992 51d4 Generated table #292@1: 7751 keys, 2157725 bytes
+2021/04/08-11:32:19.159 51d4 Generated table #293@1: 8638 keys, 2156691 bytes
+2021/04/08-11:32:19.327 51d4 Generated table #294@1: 10417 keys, 2158506 bytes
+2021/04/08-11:32:19.460 51d4 Generated table #295@1: 9974 keys, 2156707 bytes
+2021/04/08-11:32:19.682 51d4 Generated table #296@1: 47554 keys, 2209827 bytes
+2021/04/08-11:32:19.926 51d4 Generated table #297@1: 52866 keys, 2257444 bytes
+2021/04/08-11:32:20.105 51d4 Generated table #298@1: 39384 keys, 1894991 bytes
+2021/04/08-11:32:20.105 51d4 Compacted 1@1 + 9@2 files => 19301845 bytes
+2021/04/08-11:32:20.181 51d4 compacted to: files[ 0 0 9 0 0 0 0 ]
+2021/04/08-11:32:20.182 51d4 Delete type=2 #283
+2021/04/08-11:32:20.182 51d4 Delete type=2 #281
+2021/04/08-11:32:20.182 51d4 Delete type=2 #280
+2021/04/08-11:32:20.182 51d4 Delete type=2 #286
+2021/04/08-11:32:20.182 51d4 Delete type=2 #284
+2021/04/08-11:32:20.182 51d4 Delete type=2 #278
+2021/04/08-11:32:20.182 51d4 Delete type=2 #279
+2021/04/08-11:32:20.182 51d4 Delete type=2 #285
+2021/04/08-11:32:20.182 51d4 Delete type=2 #289
+2021/04/08-11:32:20.182 51d4 Delete type=2 #282
+2021/04/08-11:32:20.218 51d4 Manual compaction at level-1 from '\x00\x0a\x07\x02\x04\x02\x01+\x00s\x00/\x00i\x00d\x00+\x00x\x00w\x009\x00B\x00U\x00O\x00y\x00V\x002\x00O\x00C\x00T\x00j\x00F\x00G\x00d\x00Z\x000\x00Z\x007\x00Q\x00Q\x00Z\x00h\x00B\x00p\x00t\x00h\x00l\x00d\x00F\x00Q\x00p\x00C\x00w\x00t\x00F\x00A\x01+\x00V\x00s\x00/\x00R\x00r\x00a\x003\x007\x007\x00F\x00f\x00s\x00l\x00D\x00w\x00N\x00T\x00f\x00i\x00V\x00N\x00N\x00f\x00q\x00f\x00V\x00x\x00p\x00z\x00j\x00t\x00s\x007\x00W\x00Z\x00b\x002\x00N\x00v\x00F\x007\x00V\x004' @ 1054991 : 1 .. (end); will stop at (end)
