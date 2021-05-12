@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-# https://gitlab.com/uoou/dotfiles/-/tree/master/stow/bin/home/drew/.local/bin/pop
-
 function usage {
 	echo -e "\n\tUsage: $(basename "$0") \"name of film or show\" [season] [ep] [resolution (e.g.: 720)]"
 	exit
