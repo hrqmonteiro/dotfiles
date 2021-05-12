@@ -1,0 +1,56 @@
+#!/usr/bin/env bash
+
+# https://gitlab.com/uoou/dotfiles/-/tree/master/stow/bin/home/drew/.local/bin/pop
+
+function usage {
+	echo -e "\n\tUsage: $(basename "$0") \"name of film or show\" [season] [ep] [resolution (e.g.: 720)]"
+	exit
+}
+function play {
+	[[ -z "$magnet" ]] && echo -e "\n\tNo torrent found" && exit
+	if [[ "$POP_ECHO" == "y" ]];then
+		echo "$magnet" | xsel --clipboard
+		echo "$magnet"
+	else
+		peerflix "$magnet" -k -t -p $(shuf -i 2000-65000 -n 1) -r
+	fi
+	exit
+}
+[[ "$#" -lt 1 ]] && usage
+if [[ "$1" == *"magnet:?"* ]];then
+	magnet="$1"
+	play
+fi
+
+#apiurl="https://tv-v2.api-fetch.sh"
+apiurl="https://popcorn-ru.tk"
+
+title=$(echo "$1" | sed 's/ /%20/g')
+imdbid=$(curl -s "https://www.imdb.com/find?ref_=nv_sr_fn&s=all&q=$title" | grep -io '<a href=['"'"'"][^"'"'"']*['"'"'"]' | grep "title"| head -n1 | sed -e 's/^<a href=["'"'"']//i' -e 's/["'"'"']$//i' -e 's/\/title\///' -e 's/\///g')
+
+if ! [[ "$imdbid" == *"tt"* ]];then
+	echo -e "\n\tFilm or show not found in imdb"
+	exit
+fi
+
+# Film ( name [resolution] )
+if [[ "$#" -eq 1 ]] || [[ "$#" -eq 2 ]];then
+	if [[ "$#" -eq 1 ]];then
+		magnet=$(curl -s "$apiurl/movie/$imdbid" | jq ' .torrents | .[] | [.[]] | sort_by(.seed) | reverse | .[0] | .url ' 2>/dev/null | sed -e 's/"//g')
+	else
+		! [[ "$2" =~ ^[0-9]+$ ]] && usage
+		magnet=$(curl -s "$apiurl/movie/$imdbid" | jq " .torrents | .[] | .\"$2p\" | .url " 2>/dev/null | sed -e 's/"//g')
+	fi
+	play
+fi
+
+# TV Show ( name season episode [resolution] )
+[[ "$#" -ne 3 ]] && [[ "$#" -ne 4 ]] && usage
+! [[ "$2" =~ ^[0-9]+$ ]] || ! [[ "$3" =~ ^[0-9]+$ ]] && usage
+if [[ "$#" -eq 3 ]];then
+	magnet=$(curl -s "$apiurl/show/$imdbid" | jq ".episodes[] | select(.season==$2) | select(.episode==$3) | .torrents | [.[]] | sort_by(.seeds) | reverse | .[0] | .url " 2>/dev/null | sed -e 's/"//g')
+else
+	! [[ "$4" =~ ^[0-9]+$ ]] && usage
+	magnet=$(curl -s "$apiurl/show/$imdbid" | jq ".episodes[] | select(.season==$2) | select(.episode==$3) | .torrents | .\"$4p\" | .url" 2>/dev/null | sed -e 's/"//g')
+fi
+play
