@@ -21,6 +21,7 @@ require"compe".setup {
     vsnip = {kind = "  ", menu=""},
     nvim_lsp = {kind = "  ", menu=""},
     -- nvim_lua = {kind = "  "},
+    tabnine = true,
 	nvim_lua = false,
     spell = {kind = "  ", menu=""},
     tags = false,
@@ -94,7 +95,6 @@ map("i", "<Tab>", "v:lua.tab_complete()", {expr = true})
 map("s", "<Tab>", "v:lua.tab_complete()", {expr = true})
 map("i", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
 map("s", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
-
 
 -- protocol.CompletionItemKind = {
 --     " ", " ", " ", " ", "ﴲ ", " ", "פּ ", " ", " ", "襁 ", " ", " ",

@@ -46,11 +46,11 @@ window:
   # Blank space added around the window in pixels. This padding is scaled
   # by DPI and the specified value is always added at both opposing sides.
   padding:
-    x: 2
+    x: 0
     y: 0
 
   # Spread additional padding evenly around the terminal content.
-  #dynamic_padding: false
+  # dynamic_padding: true
 
   # Window decorations
   #
@@ -111,10 +111,10 @@ font:
     #   - (macOS) Menlo
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
-    family: Iosevka SS08
+    family: Victor Mono Nerd Font
 
     # The `style` can be specified to pick a specific face.
-    style: Medium
+    style: SemiBold
 
   # Bold font face
   bold:
@@ -122,7 +122,7 @@ font:
     #
     # If the bold family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: Iosevka SS08
+    family: Victor Mono Nerd Font
 
     # The `style` can be specified to pick a specific face.
     style: Bold
@@ -133,10 +133,10 @@ font:
     #
     # If the italic family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: Iosevka SS08
+    family: Victor Mono Nerd Font
 
     # The `style` can be specified to pick a specific face.
-    style: Medium Italic
+    style: SemiBold Italic
 
   # Bold italic font face
   bold_italic:
@@ -144,7 +144,7 @@ font:
     #
     # If the bold italic family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: Iosevka SS08
+    family: Victor Mono Nerd Font
 
     # The `style` can be specified to pick a specific face.
     style: Bold Italic
@@ -157,7 +157,7 @@ font:
   # spacing.
   offset:
     x: 0
-    y: 0
+    y: -1
 
   # Glyph offset determines the locations of the glyphs within their cells with
   # the default being at the bottom. Increasing `x` moves the glyph to the

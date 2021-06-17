@@ -8,18 +8,41 @@ lsp.handlers["textDocument/publishDiagnostics"] =
     underline = true,
     virtual_text = {
       space = 2,
-      prefix = " "
+      prefix = ""
     },
     signs = true,
-    update_in_insert = false
+    update_in_insert = true
   }
 )
 
-sign_define("LspDiagnosticsSignError",
-            {texthl = "IndentBlanklineChar", text = "", numhl = "CursorLineNr"})
-sign_define("LspDiagnosticsSignWarning",
-            {texthl = "IndentBlanklineChar", text = "", numhl = "CursorLineNr"})
-sign_define("LspDiagnosticsSignHint",
-            {texthl = "IndentBlanklineChar", text = "", numhl = "LspDiagnosticsSignHint"})
-sign_define("LspDiagnosticsSignInformation",
-                   {texthl = "IndentBlanklineChar", text = "", numhl = "CursorLineNr"})
+sign_define(
+  "LspDiagnosticsSignError",
+  {
+    text = "",
+    texthl = "LspDiagnosticsError"
+  }
+)
+
+sign_define(
+  "LspDiagnosticsSignWarning",
+  {
+    text = "",
+    texthl = "LspDiagnosticsWarning"
+  }
+)
+
+sign_define(
+  "LspDiagnosticsSignInformation",
+  {
+    text = "",
+    texthl = "LspDiagnosticsInformation"
+  }
+)
+
+sign_define(
+  "LspDiagnosticsSignHint",
+  {
+    text = "",
+    texthl = "LspDiagnosticsHint"
+  }
+)

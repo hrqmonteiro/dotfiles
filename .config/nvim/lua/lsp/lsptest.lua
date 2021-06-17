@@ -1,9 +1,15 @@
 require'lspconfig'.cssls.setup{}
-require'lspconfig'.solargraph.setup{}
+require'lspconfig'.solargraph.setup{
+    filetypes = { "ruby", "jbuilder" }
+}
 require'lspconfig'.gopls.setup{}
 require'lspconfig'.html.setup{}
+require'lspconfig'.rust_analyzer.setup{}
+require'lspconfig'.gopls.setup{}
 
-local sumneko_root_path = "/home/hrq/lua-language-server"
+-- require("lsp-rooter").setup{}
+
+local sumneko_root_path = "/home/hrq/.local/bin/lua-language-server"
 local sumneko_binary = sumneko_root_path.."/bin/Linux/lua-language-server"
 
 require'lspconfig'.sumneko_lua.setup {
@@ -19,9 +25,12 @@ require'lspconfig'.sumneko_lua.setup {
             },
             workspace = {
                 library = {[vim.fn.expand('$VIMRUNTIME/lua')] = true, [vim.fn.expand('$VIMRUNTIME/lua/vim/lsp')] = true}
-            }
-        }
-    }
+            },
+            telemetry = {
+                enable = false,
+            },
+        },
+    },
 }
 
 -- require'lspconfig'.denols.setup{}

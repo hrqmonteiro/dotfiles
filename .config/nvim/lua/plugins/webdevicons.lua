@@ -38,6 +38,7 @@ require'nvim-web-devicons'.setup {
         haml = {icon = "", color = colors.nord12, name = "haml"},
         erb = {icon = "", color = colors.nord11, name = "eruby"},
         js = {icon = "", color = colors.nord13, name = "js"},
+        ts = {icon = "ﯤ", color = colors.nord9, name = "ts"},
         jsx = {icon = "", color = colors.nord8, name = "jsx"},
         json = {icon = "", color = colors.nord13, name = "json"},
         bundle = {icon = "", color = colors.nord11, name = "bundle"},
@@ -53,9 +54,12 @@ require'nvim-web-devicons'.setup {
         Rakefile = {icon = "", color = colors.nord11, name = "configru" },
         rb = {icon = "", color = colors.nord11, name = "ruby"},
         ['README.md'] = {icon = "", color = colors.nord8, name = "readmemd"},
-        NeogitStatus = {icon = "", color = colors.nord4, name = "NeogitStatus"}
+        NeogitStatus = {icon = "", color = colors.nord4, name = "NeogitStatus"},
+        vue = {icon = "﵂", color = "#41B883", name = "vue" },
+        py = {icon = "", color = colors.nord8, name = "python"},
     },
     -- globally enable default icons (default to false)
     -- will get overriden by `get_icons` option
     default = true
 }
+

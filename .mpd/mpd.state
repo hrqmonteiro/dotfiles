@@ -1,0 +1,26 @@
+sw_volume: 41
+audio_device_state:1:Pulseaudio
+audio_device_state:1:Visualizer
+state: pause
+current: 0
+time: 4.927000
+random: 0
+repeat: 0
+single: 0
+consume: 0
+crossfade: 0
+mixrampdb: 0.000000
+mixrampdelay: -1.000000
+playlist_begin
+0:Devin Townsend Discography (1993 - 2019)/Devin Townsend/2001 - Terria/01 - Olives.mp3
+1:Devin Townsend Discography (1993 - 2019)/Devin Townsend/2001 - Terria/02 - Mountain.mp3
+2:Devin Townsend Discography (1993 - 2019)/Devin Townsend/2001 - Terria/03 - Earth Day.mp3
+3:Devin Townsend Discography (1993 - 2019)/Devin Townsend/2001 - Terria/04 - Deep Peace.mp3
+4:Devin Townsend Discography (1993 - 2019)/Devin Townsend/2001 - Terria/05 - Canada.mp3
+5:Devin Townsend Discography (1993 - 2019)/Devin Townsend/2001 - Terria/06 - Down And Under.mp3
+6:Devin Townsend Discography (1993 - 2019)/Devin Townsend/2001 - Terria/07 - The Fluke.mp3
+7:Devin Townsend Discography (1993 - 2019)/Devin Townsend/2001 - Terria/08 - Nobody's Here.mp3
+8:Devin Townsend Discography (1993 - 2019)/Devin Townsend/2001 - Terria/09 - Tiny Tears.mp3
+9:Devin Townsend Discography (1993 - 2019)/Devin Townsend/2001 - Terria/10 - Stagnant.mp3
+10:Devin Townsend Discography (1993 - 2019)/Devin Townsend/2001 - Terria/11 - Universal (Bonus Track).mp3
+playlist_end

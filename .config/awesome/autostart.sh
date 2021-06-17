@@ -15,10 +15,8 @@ function run {
 
 xrdb ~/.Xresources
 run picom --experimental-backends -b &
-run pa-applet
-run nm-applet
-run cbatticon
+run nm-applet &
+run pa-applet &
 run nitrogen --restore &
 run mpd &
 run mpdas &
-

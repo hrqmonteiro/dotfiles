@@ -36,6 +36,9 @@ function U.hi(group, styles)
   if styles.fg then
     command = string.format("%s guifg=%s", command, styles.fg)
   end
+  if styles.sp then
+      command = string.format("%s guisp=%s", command, styles.sp)
+  end
   if styles.cbg then
     command = string.format("%s ctermbg=%s", command, styles.cbg)
   end

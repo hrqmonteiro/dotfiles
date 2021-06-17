@@ -2,7 +2,7 @@ local cmd = vim.cmd
 local gl = require("galaxyline")
 local fn = vim.fn
 local section = gl.section
-gl.short_line_list = {"NvimTree", "packager", "Floaterm", "NeogitStatus", "vista_kind"}
+gl.short_line_list = {"NvimTree", "packager", "Floaterm", "NeogitStatus", "vista", "vista_kind"}
 local condition = require('galaxyline.condition')
 
 local colors = {
@@ -247,7 +247,7 @@ section.right[7] = {
 section.right[8] = {
   GetLspClient = {
     provider = "GetLspClient",
-    separator = " ",
+    separator = "  ",
     condition = buffer_not_empty,
     separator_highlight = {colors.nord9, colors.nordbg},
     highlight = {colors.nord8, colors.nordbg, "bold"}
@@ -299,3 +299,4 @@ section.short_line_left[2] = {
     highlight = {colors.nordbg, colors.nordbg}
   }
 } ]]
+

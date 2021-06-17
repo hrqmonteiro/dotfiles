@@ -1,0 +1,28 @@
+-- vim.cmd [[ autocmd CursorHold,CursorHoldI * lua LightBulbFunction() ]]
+-- LightBulbFunction = function()
+--     require'nvim-lightbulb'.update_lightbulb {
+--         sign = {
+--             enabled = false,
+--             -- Priority of the gutter sign
+--             priority = 10,
+--         },
+--         float = {
+--             enabled = true,
+--             -- Text to show in the popup float
+--             text = "💡",
+--         },
+--         virtual_text = {
+--             enabled = false,
+--             text = ""
+--         }
+--     }
+-- end
+-- 
+-- vim.fn.sign_define('LightBulbSign', {
+--     text = "",
+--     texthl = "Lightbulb",
+--     linehl="Lightbulb",
+--     numhl="Lightbulb" }
+-- )
+-- 
+-- -- vim.api.nvim_command('highlight LightBulbFloatWin guibg=none guifg=#e0af68')

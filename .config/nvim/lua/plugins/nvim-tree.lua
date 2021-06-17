@@ -36,14 +36,17 @@ vim.g.nvim_tree_show_icons = {
     git = 0,
     folders = 1,
     files = 1,
+    folder_arrows = 1,
 }
+
+vim.g.nvim_tree_special_files = {}
 
 vim.g.nvim_auto_open = 1
 vim.g.nvim_tree_auto_close = 1
 vim.g.nvim_tree_indent_markers = 0
 vim.g.nvim_tree_add_trailing = 0
-vim.g.nvim_tree_highlight_opened_files = 0
-vim.g.nvim_tree_width = 35
+vim.g.nvim_tree_highlight_opened_files = 1
+vim.g.nvim_tree_width = 32
 vim.g.nvim_tree_width_allow_resize = 1
 
 

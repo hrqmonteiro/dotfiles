@@ -26,7 +26,7 @@ apply_options (
     splitbelow = true,
     splitright = true,
     t_Co = "256",
-    conceallevel = 0,
+    conceallevel = 1,
     wildmenu = true,
   }
 )

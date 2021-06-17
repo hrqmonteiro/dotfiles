@@ -7,7 +7,8 @@ g.mapleader = ' '
 
 map('n', '<C-b>', ':NvimTreeToggle<CR>', {silent = true})
 map('n', '<C-f>', ':Telescope find_files<CR>', {silent = true})
-map('n', '<C-t>', ':Toggle<CR>', {silent = true})
+map('n', '<C-`>', ':Toggle<CR>', {silent = true})
+map('n', '<C-t>', ':ToggleTerm<CR>', {noremap = true, silent = true})
 map('n', '<C-s>', ':Neoformat prettier<CR>', {noremap = true, silent = true})
 map('n', '<C-g>', ':TZAtaraxis<CR>', {noremap = true, silent = true})
 map('n', '<Leader>.', ':Telescope file_browser<CR>', {silent = true})
@@ -29,5 +30,3 @@ keymap(0, 'n', '<Leader>gg', "<cmd>lua require'neogit.status'.create('split')<cr
 
 map('n', '<A.<>', ':BufferMovePrevious', {noremap = true, silent = true})
 map('n', '<A.>>', ':BufferMoveNext', {noremap = true, silent = true})
-
-vim.cmd('nnoremap <silent> K :Lspsaga hover_doc<CR>')

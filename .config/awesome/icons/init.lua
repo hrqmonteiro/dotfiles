@@ -35,7 +35,7 @@ icons.text.by_class = {
     ['Sxiv'] = { symbol = "", color = x.color1 },
 
     -- General
-    ['TelegramDesktop'] = { symbol = "", color = x.color4 },
+    ['TelegramDesktop'] = { symbol = "icons.image.telegram", color = x.color4 },
     ['Firefox'] = { symbol = "", color = x.color3 },
     ['firefox'] = { symbol = "", color = x.color3 },
     ['Nightly'] = { symbol = "", color = x.color4 },
@@ -111,9 +111,7 @@ local image_icon_names = {
     "battery_charging",
     "cpu",
     "compositor",
-    "launcher",
-    "launcher_hover",
-    "launcher_pressed",
+    "start",
     "ram",
     "screenshot",
     "home",
@@ -146,7 +144,7 @@ local p
 -- Assumes all the icon files end in .png
 -- TODO maybe automatically detect icons in icon theme directory
 local function set_image_icon(icon_name)
-    local i = p..icon_name..".svg"
+    local i = p..icon_name..".png"
     icons.image[icon_name] = i
 end
 

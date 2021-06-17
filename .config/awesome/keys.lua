@@ -33,9 +33,6 @@ globalkeys = gears.table.join(
         end,
         {description = "focus previous by index", group = "client"}
     ),
-    awful.key({ modkey,           }, "w", function () mymainmenu:show() end,
-              {description = "show main menu", group = "awesome"}),
-
     -- Layout manipulation
     awful.key({ modkey, "Shift"   }, "j", function () awful.client.swap.byidx(  1)    end,
               {description = "swap with next client by index", group = "client"}),
@@ -59,10 +56,10 @@ globalkeys = gears.table.join(
     -- Standard programs
 
     -- Spawn terminal
-    awful.key({ modkey,           }, "Return", function () awful.spawn(terminal) end,
+    awful.key({ modkey,           }, "Return", function () awful.spawn(Terminal) end,
               {description = "open a terminal", group = "launcher"}),
 
-    awful.key({ modkey, "Shift"   }, "Return", function () awful.spawn(floating_terminal) end,
+    awful.key({ modkey, "Shift"   }, "Return", function () awful.spawn(FloatingTerminal, {floating = true}) end,
               {description = "open a floating terminal", group = "launcher"}),
 
     awful.key({ modkey, "Control" }, "r", awesome.restart,
@@ -100,7 +97,7 @@ globalkeys = gears.table.join(
               {description = "restore minimized", group = "client"}),
 
     -- Rofi
-    awful.key({ modkey }, "p", function () awful.spawn.with_shell("rofi -show drun") end,
+    awful.key({ modkey }, "p", function () awful.spawn.with_shell(".config/rofi/bin/launcher_ribbon") end,
               {description = "run prompt", group = "launcher"}),
 
     awful.key({ modkey }, "x",
