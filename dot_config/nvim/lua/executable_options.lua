@@ -19,7 +19,7 @@ local function apply_options(opts)
 end
 
 local globals = {
-  -- everforest_background = "hard",
+  everforest_background = "hard",
 }
 
 apply_globals(globals)
@@ -34,8 +34,8 @@ local options = {
   incsearch = true,
   hidden = true,
   mouse = "nv",
-  number = true,
-  relativenumber = true,
+  number = false,
+  relativenumber = false,
   shiftwidth = 2,
   showmode = false,
   signcolumn = "yes",

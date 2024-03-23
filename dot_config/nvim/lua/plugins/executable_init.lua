@@ -21,11 +21,34 @@ local plugins = {
   --   priority = 1000
   -- },
   {
+    "kevinhwang91/nvim-ufo",
+    dependencies = { "kevinhwang91/promise-async" }
+  },
+  {
+    "chrisgrieser/nvim-origami",
+    event = "BufReadPost", -- later or on keypress would prevent saving folds
+    opts = true,           -- needed even when using default config
+  },
+  {
+    "ggandor/leap.nvim",
+    dependencies = { "tpope/vim-repeat" },
+    config = function()
+      require('leap').create_default_mappings()
+    end
+  },
+  -- Clojure development
+  {
+    "Olical/conjure",
+    config = function()
+      vim.g["conjure#eval#inline#highlight"] = "CursorLine"
+    end
+  },
+  "clojure-vim/vim-jack-in",
+  "tpope/vim-dispatch",
+  "radenling/vim-dispatch-neovim",
+  {
     'goolord/alpha-nvim',
     dependencies = { 'nvim-tree/nvim-web-devicons' },
-    config = function()
-      require 'alpha'.setup(require 'alpha.themes.startify'.config)
-    end
   },
   "lewis6991/gitsigns.nvim",
   {
@@ -35,6 +58,11 @@ local plugins = {
       "nvim-lua/plenary.nvim",
     },
   },
+  -- {
+  --   "nvim-tree/nvim-tree.lua",
+  --   config = function()
+  --   end
+  -- },
   {
     "nvim-neo-tree/neo-tree.nvim",
     branch = "v3.x",
@@ -44,6 +72,30 @@ local plugins = {
       "MunifTanjim/nui.nvim",
       -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
     }
+  },
+  {
+    {
+      "nvim-neorg/neorg",
+      build = ":Neorg sync-parsers",
+      lazy = false, -- specify lazy = false because some lazy.nvim distributions set lazy = true by default
+      -- tag = "*",
+      dependencies = { "nvim-lua/plenary.nvim" },
+      config = function()
+        require("neorg").setup {
+          load = {
+            ["core.defaults"] = {},  -- Loads default behaviour
+            ["core.concealer"] = {}, -- Adds pretty icons to your documents
+            ["core.dirman"] = {      -- Manages Neorg workspaces
+              config = {
+                workspaces = {
+                  notes = "~/Notes",
+                },
+              },
+            },
+          },
+        }
+      end,
+    },
   },
   {
     "f-person/auto-dark-mode.nvim",
@@ -67,6 +119,24 @@ local plugins = {
       vim.cmd([[ colorscheme solarized ]])
     end
   },
+  {
+    "luukvbaal/nnn.nvim",
+    config = function() require("nnn").setup() end
+  },
+  -- {
+  --   "lukas-reineke/headlines.nvim",
+  --   config = function()
+  --     require("headlines").setup()
+  --   end,
+  -- },
+  -- {
+  --   "catppuccin/nvim",
+  --   lazy = false,
+  --   priority = 1000,
+  --   config = function()
+  --     vim.cmd("colorscheme catppuccin")
+  --   end
+  -- },
   -- completion
   "hrsh7th/nvim-cmp",
   "hrsh7th/cmp-nvim-lsp",
@@ -99,6 +169,8 @@ local plugins = {
 }
 
 require("lazy").setup(plugins, opts)
+require("plugins.nvim-web-devicons")
+require("plugins.alpha")
 require("plugins.gitsigns")
 require("plugins.lsp-config")
 require("plugins.lualine")
@@ -106,4 +178,6 @@ require("plugins.neo-tree")
 require("plugins.null-ls")
 require("plugins.nvim-autopairs")
 require("plugins.nvim-cmp")
+-- require("plugins.nvim-tree")
 require("plugins.nvim-treesitter")
+require("plugins.nvim-ufo")
