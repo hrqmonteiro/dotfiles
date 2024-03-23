@@ -1,0 +1,30 @@
+. "$HOME/.asdf/asdf.sh"
+. "$HOME/.asdf/completions/asdf.bash"
+
+export CHROME_EXECUTABLE="/usr/bin/chromium"
+export FLUTTER_ROOT="$(asdf where flutter)"
+export GOPATH="$(asdf where golang)/packages/bin"
+export PATH="$GOPATH:$PATH"
+export ANDROID_HOME="$HOME/Android/Sdk"
+export PATH="$ANDROID_HOME/tools:$PATH"
+export PATH="$ANDROID_HOME/tools/bin:$PATH"
+export PATH="$ANDROID_HOME/platform-tools:$PATH"
+export PATH="$ANDROID_HOME/platform-tools/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
+export PATH="/home/hrq/.asdf/installs/rust/1.76.0/bin:$PATH"
+source "/home/hrq/.asdf/installs/rust/1.76.0/env"
+
+BLK="0B" CHR="0B" DIR="04" EXE="06" REG="00" HARDLINK="06" SYMLINK="06" MISSING="00" ORPHAN="09" FIFO="06" SOCK="0B" OTHER="06"
+export NNN_FCOLORS="$BLK$CHR$DIR$EXE$REG$HARDLINK$SYMLINK$MISSING$ORPHAN$FIFO$SOCK$OTHER"
+
+alias gg="lazygit"
+alias ls="eza"
+alias vim="nvim"
+
+eval "$(starship init bash)"
+
+# fnm
+export PATH="/home/hrq/.local/share/fnm:$PATH"
+eval "`fnm env`"
+
+eval "$(fzf --bash)"
