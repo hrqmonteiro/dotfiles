@@ -17,7 +17,7 @@ disabled = true
 style = "bold cyan"
 
 [aws]
-symbol = "  "
+symbol = "󰸏  "
 
 [buf]
 symbol = " "

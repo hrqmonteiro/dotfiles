@@ -15,11 +15,12 @@ vim.opt.rtp:prepend(lazypath)
 local opts = {}
 
 local plugins = {
-  -- {
-  --   "ActivityWatch/aw-watcher-vim",
-  --   lazy = false,
-  --   priority = 1000
-  -- },
+  {
+    "ActivityWatch/aw-watcher-vim",
+    lazy = false,
+    priority = 1000
+  },
+  "christoomey/vim-tmux-navigator",
   {
     "kevinhwang91/nvim-ufo",
     dependencies = { "kevinhwang91/promise-async" }

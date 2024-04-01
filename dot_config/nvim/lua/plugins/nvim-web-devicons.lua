@@ -468,7 +468,7 @@ local icons_by_file_extension = {
     name = "apk",
   },
   ["asm"] = {
-    icon = "",
+    icon = "",
     color = "#cc3e44",
     cterm_color = "167",
     name = "Asm"
@@ -539,7 +539,7 @@ local icons_by_file_extension = {
     name = "Racket",
   },
   ["s"] = {
-    icon = "",
+    icon = "",
     color = "#cc3e44",
     cterm_color = "167",
     name = "S"
