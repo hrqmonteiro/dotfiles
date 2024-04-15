@@ -11,20 +11,21 @@ export PATH="$ANDROID_HOME/tools/bin:$PATH"
 export PATH="$ANDROID_HOME/platform-tools:$PATH"
 export PATH="$ANDROID_HOME/platform-tools/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
-export PATH="/home/hrq/.asdf/installs/rust/1.76.0/bin:$PATH"
-source "/home/hrq/.asdf/installs/rust/1.76.0/env"
+export PATH="$HOME/.asdf/installs/rust/1.77.1/bin:$PATH"
+export PATH="$HOME/.local/share/nvim/lazy/vim-iced/bin:$PATH"
+source "/home/hrq/.asdf/installs/rust/1.77.1/env"
 
 BLK="0B" CHR="0B" DIR="04" EXE="06" REG="00" HARDLINK="06" SYMLINK="06" MISSING="00" ORPHAN="09" FIFO="06" SOCK="0B" OTHER="06"
 export NNN_FCOLORS="$BLK$CHR$DIR$EXE$REG$HARDLINK$SYMLINK$MISSING$ORPHAN$FIFO$SOCK$OTHER"
+export FZF_DEFAULT_OPTS=" \
+--color=bg+:#363a4f,bg:#24273a,spinner:#f4dbd6,hl:#ed8796 \
+--color=fg:#cad3f5,header:#ed8796,info:#c6a0f6,pointer:#f4dbd6 \
+--color=marker:#f4dbd6,fg+:#cad3f5,prompt:#c6a0f6,hl+:#ed8796"
 
 alias gg="lazygit"
 alias ls="eza"
 alias vim="nvim"
 
 eval "$(starship init bash)"
-
-# fnm
-export PATH="/home/hrq/.local/share/fnm:$PATH"
-eval "`fnm env`"
-
+eval "$(zoxide init bash)"
 eval "$(fzf --bash)"

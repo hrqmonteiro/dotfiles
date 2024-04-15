@@ -157,7 +157,7 @@ cmp.setup({
         return true
       end,
     },
-
+    { name = "conjure" },
     { name = "path" },
     { name = "luasnip" },
     { name = "cmp_tabnine" },

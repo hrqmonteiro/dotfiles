@@ -15,7 +15,17 @@ require("neo-tree").setup({
         staged    = "",
         conflict  = "",
       }
-    }
+    },
+    indent = {
+      with_expanders = true, -- if nil and file nesting is enabled, will enable expanders
+      expander_collapsed = "",
+      expander_expanded = "",
+      with_markers = false,
+      expander_highlight = "NeoTreeFileIcon"
+    },
+    name = {
+      use_git_status_colors = false
+    },
   },
   filesystem = {
     filtered_items = {
@@ -25,7 +35,7 @@ require("neo-tree").setup({
     }
   },
   window = {
-    position = "right",
-    width = 26
+    position = "left",
+    width = 30
   }
 })
