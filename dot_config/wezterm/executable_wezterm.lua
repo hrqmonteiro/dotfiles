@@ -25,7 +25,7 @@ return {
   font = wezterm.font({
     family = 'Iosevka Nerd Font',
   }),
-  font_size = 15,
+  font_size = 18,
   macos_window_background_blur = 70,
   window_background_opacity = 1,
   window_padding = {

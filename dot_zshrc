@@ -1,0 +1,37 @@
+. "$HOME/.asdf/asdf.sh"
+
+# append completions to fpath
+fpath=(${ASDF_DIR}/completions $fpath)
+# initialise completions with ZSH's compinit
+autoload -Uz compinit && compinit
+
+. "/Users/hrq/.asdf/installs/rust/1.77.2/env"
+export GOPATH="$(asdf where golang)/packages/bin"
+export PATH="$GOPATH:$PATH"
+export ANDROID_HOME="/Users/hrq/Library/Android/sdk"
+export PATH="$ANDROID_HOME/tools:$PATH"
+export PATH="$ANDROID_HOME/tools/bin:$PATH"
+export PATH="$ANDROID_HOME/platform-tools:$PATH"
+export PATH="$ANDROID_HOME/platform-tools/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
+
+BLK="0B" CHR="0B" DIR="04" EXE="06" REG="00" HARDLINK="06" SYMLINK="06" MISSING="00" ORPHAN="09" FIFO="06" SOCK="0B" OTHER="06"
+export NNN_FCOLORS="$BLK$CHR$DIR$EXE$REG$HARDLINK$SYMLINK$MISSING$ORPHAN$FIFO$SOCK$OTHER"
+export FZF_DEFAULT_OPTS=" \
+--color=bg+:#363a4f,bg:#24273a,spinner:#f4dbd6,hl:#ed8796 \
+--color=fg:#cad3f5,header:#ed8796,info:#c6a0f6,pointer:#f4dbd6 \
+--color=marker:#f4dbd6,fg+:#cad3f5,prompt:#c6a0f6,hl+:#ed8796"
+
+alias gg="lazygit"
+alias ls="eza"
+alias vim="nvim"
+
+# fnm
+export PATH="/Users/hrq/Library/Application Support/fnm:$PATH"
+eval "`fnm env`"
+
+eval "$(starship init zsh)"
+eval "$(zoxide init zsh)"
+eval "$(fzf --zsh)"
+
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
