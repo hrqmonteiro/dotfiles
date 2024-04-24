@@ -1,4 +1,4 @@
 require "autocmds"
-require "keys"
-require "options"
 require "plugins"
+-- require "keys"
+require "options"
