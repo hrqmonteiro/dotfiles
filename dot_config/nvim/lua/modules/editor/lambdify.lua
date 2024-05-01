@@ -1,0 +1,5 @@
+return {
+  {
+    "calebsmith/vim-lambdify"
+  }
+}

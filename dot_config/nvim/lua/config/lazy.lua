@@ -13,11 +13,14 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup(
-	{ import = "plugins" },
-	{
-		install = {
-			missing = true,
-			colorscheme = { "catppuccin" }
-		}
-	}
+  {
+    spec = {
+      { import = "modules.completion" },
+      { import = "modules.editor" },
+      { import = "modules.lsp" },
+      { import = "modules.ui" },
+      { import = "modules.tools" },
+    }
+  },
+  {}
 )

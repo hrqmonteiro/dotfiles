@@ -1,0 +1,26 @@
+return {
+  {
+    "f-person/auto-dark-mode.nvim",
+    config = {
+      update_interval = 1000,
+      set_dark_mode = function()
+        vim.api.nvim_set_option("background", "dark")
+        vim.cmd("colorscheme catppuccin")
+        vim.cmd("hi GitSignsAdd guibg=none")
+        vim.cmd("hi GitSignsChange guibg=none")
+        vim.cmd("hi GitSignsUpdate guibg=none")
+        vim.cmd("hi GitSignsDelete guibg=none")
+        vim.cmd("hi SignColumn guibg=none")
+      end,
+      set_light_mode = function()
+        vim.api.nvim_set_option("background", "light")
+        vim.cmd("colorscheme catppuccin")
+        vim.cmd("hi GitSignsAdd guibg=none")
+        vim.cmd("hi GitSignsChange guibg=none")
+        vim.cmd("hi GitSignsUpdate guibg=none")
+        vim.cmd("hi GitSignsDelete guibg=none")
+        vim.cmd("hi SignColumn guibg=none")
+      end
+    }
+  }
+}
