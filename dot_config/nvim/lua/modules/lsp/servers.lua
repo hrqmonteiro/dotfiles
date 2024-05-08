@@ -25,7 +25,7 @@ return {
   "mdx_analyzer",
   "nim_langserver",
   "swift_mesonls",
-  "ocamllsp",
+  -- "ocamllsp",
   "ols",
   "omnisharp",
   "spectral",

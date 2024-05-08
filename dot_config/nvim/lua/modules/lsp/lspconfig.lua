@@ -13,37 +13,20 @@ return {
 
       local capabilities = vim.lsp.protocol.make_client_capabilities()
 
-      -- local on_attach = function(client, bufnr)
-      --   if client.server_capabilities.documentSymbolProvider then
-      --     navic.attach(client, bufnr)
-      --   end
-      -- end
-
-      -- for _, server in ipairs(servers) do
-      --   lspconfig[server].setup {
-      --     capabilities = capabilities,
-      --     on_attach = on_attach
-      --   }
-      -- end
-
-      lspconfig.tsserver.setup({
-        capabilities = capabilities,
-        on_attach = function(client, bufnr)
+      local on_attach = function(client, bufnr)
+        if client.server_capabilities.documentSymbolProvider then
           navic.attach(client, bufnr)
         end
-      })
+      end
 
-      lspconfig.lua_ls.setup({
-        settings = {
-          Lua = {
-            completion = {
-              callSnippet = "Replace"
-            }
-          }
+      for _, server in ipairs(servers) do
+        lspconfig[server].setup {
+          capabilities = capabilities,
+          on_attach = on_attach
         }
-      })
+      end
 
-      vim.o.winbar = "%{%v:lua.require'nvim-navic'.get_location()%}"
+      -- vim.o.winbar = "%{%v:lua.require'nvim-navic'.get_location()%}"
     end
   }
 }

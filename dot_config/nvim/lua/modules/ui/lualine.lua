@@ -1,9 +1,14 @@
 return {
   {
     "nvim-lualine/lualine.nvim",
+    dependencies = {
+      "ecthelionvi/NeoComposer.nvim",
+      "kkharji/sqlite.lua"
+    },
     lazy = false,
     config = function()
       local navic = require("nvim-navic")
+      require("NeoComposer").setup()
 
       require('lualine').setup {
         options = {
@@ -24,8 +29,8 @@ return {
         },
         sections = {
           lualine_a = { 'mode' },
-          lualine_b = { 'branch', 'diff', 'diagnostics' },
-          lualine_c = { 'filename' },
+          lualine_b = { require("NeoComposer.ui").status_recording, 'branch', 'diff', 'diagnostics' },
+          lualine_d = { 'filename' },
           lualine_x = { 'filetype' },
           lualine_y = { 'progress' },
           lualine_z = { 'location' }

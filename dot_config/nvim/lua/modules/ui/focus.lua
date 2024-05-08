@@ -2,7 +2,11 @@ return {
   {
     "nvim-focus/focus.nvim",
     config = function()
-      require("focus").setup({})
+      require("focus").setup({
+        ui = {
+          signcolumn = false
+        }
+      })
 
       local ignore_filetypes = { 'neo-tree', 'Outline' }
       local ignore_buftypes = { 'nofile', 'prompt', 'popup' }
