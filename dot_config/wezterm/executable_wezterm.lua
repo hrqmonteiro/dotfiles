@@ -18,21 +18,22 @@ local wezterm = require 'wezterm'
 --   end
 -- end)
 
+
 return {
-  color_scheme = 'Catppuccin Macchiato',
+  color_scheme = "nord",
   default_prog = tmux,
   enable_tab_bar = false,
   font = wezterm.font({
-    family = 'Iosevka Nerd Font',
+    family = "Iosevka Nerd Font",
   }),
-  font_size = 18,
+  font_size = 15,
   macos_window_background_blur = 70,
   window_background_opacity = 1,
   window_padding = {
-    left = 10,
-    right = 10,
-    top = 10,
-    bottom = 10
+    left = 2,
+    right = 2,
+    top = 2,
+    bottom = 2
   },
   -- window_decorations = "RESIZE"
 }
