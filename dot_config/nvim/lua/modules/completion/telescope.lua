@@ -7,8 +7,8 @@ return {
       "tomasky/bookmarks.nvim",
       "nvim-telescope/telescope-ui-select.nvim",
       "nvim-telescope/telescope-file-browser.nvim",
-      "nvim-telescope/telescope-project.nvim",
       "dharmx/telescope-media.nvim",
+      "LukasPietzschmann/telescope-tabs"
     },
     config = function()
       require("telescope").setup({
@@ -47,12 +47,21 @@ return {
         }
       })
 
-      require("telescope").load_extension("emoji")
       require("telescope").load_extension("bookmarks")
-      require("telescope").load_extension("ui-select")
+      require("telescope").load_extension("emoji")
       require("telescope").load_extension("file_browser")
-      require("telescope").load_extension("project")
       require("telescope").load_extension("media")
+      require("telescope").load_extension("telescope-tabs")
+      require("telescope").load_extension("ui-select")
+
+      require('telescope-tabs').setup({
+        entry_formatter = function(tab_id, buffer_ids, file_names, file_paths, is_current)
+          local entry_string = table.concat(vim.tbl_map(function(v)
+            return vim.fn.fnamemodify(v, ":.")
+          end, file_paths), ', ')
+          return string.format('%d: %s%s', tab_id, entry_string, is_current and ' <' or '')
+        end
+      })
 
       require("bookmarks").setup({
         save_file = vim.fn.expand "$HOME/.bookmarks", -- bookmarks save file path

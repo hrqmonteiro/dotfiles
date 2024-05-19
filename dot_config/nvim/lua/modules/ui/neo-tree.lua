@@ -45,6 +45,9 @@ return {
           }
         },
         window = {
+          mappings = {
+            ["<cr>"] = "open_tabnew",
+          },
           position = "left",
           width = 30
         }

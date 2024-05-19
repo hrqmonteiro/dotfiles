@@ -8,7 +8,10 @@ return {
     lazy = false,
     config = function()
       local navic = require("nvim-navic")
-      require("NeoComposer").setup()
+      require("NeoComposer").setup({
+      })
+
+      vim.cmd("hi! link ComposerNormal StatusLine")
 
       require('lualine').setup {
         options = {

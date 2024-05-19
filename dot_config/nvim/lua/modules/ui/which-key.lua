@@ -10,7 +10,20 @@ return {
     config = function()
       require("which-key").setup({
         icons = {
-          separator = "⇝ "
+          breadcrumb = "⟶ ",
+          separator = "⟶ "
+        },
+        layout = {
+          align = "left",
+          -- height = {
+          --   min = 6,
+          --   max = 25
+          -- },
+          -- spacing = 2,
+          -- width = {
+          --   min = 38,
+          --   max = 38
+          -- }
         }
       })
     end

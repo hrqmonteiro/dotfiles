@@ -38,6 +38,7 @@ local options = {
   relativenumber = false,
   shiftwidth = 2,
   showmode = false,
+  showtabline = 0,
   signcolumn = "yes",
   splitbelow = true,
   splitright = true,
