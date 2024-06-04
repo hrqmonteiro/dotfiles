@@ -12,13 +12,14 @@ return {
               return count .. " usages"
             end
           end,
-          implements = function (count)
-            if count <= 1 then
-              return count .. " implementation"
-            else
-              return count .. " implementations"
-            end
-          end,
+          implements = false,
+          -- implements = function (count)
+          --   if count <= 1 then
+          --     return count .. " implementation"
+          --   else
+          --     return count .. " implementations"
+          --   end
+          -- end,
           git_authors = false
         }
       })

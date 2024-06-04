@@ -9,9 +9,13 @@ return {
   "gopls",
   "graphql",
   "html",
+  "java_language_server",
   "jsonls",
+  "kotlin_language_server",
   "marksman",
   "mdx_analyzer",
+  "nim_langserver",
+  "nimls",
   "prismals",
   "rust_analyzer",
   "sqlls",
@@ -19,6 +23,7 @@ return {
   "taplo",
   "tsserver",
   "lemminx",
+  "volar",
   "yamlls",
   "zls"
 }
