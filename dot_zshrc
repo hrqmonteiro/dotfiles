@@ -5,7 +5,6 @@ fpath=(${ASDF_DIR}/completions $fpath)
 # initialise completions with ZSH's compinit
 autoload -Uz compinit && compinit
 
-. "/Users/hrq/.asdf/installs/rust/1.77.2/env"
 export GOPATH="$(asdf where golang)/packages/bin"
 export PATH="$GOPATH:$PATH"
 export ANDROID_HOME="/Users/hrq/Library/Android/sdk"
@@ -35,3 +34,8 @@ eval "$(zoxide init zsh)"
 eval "$(fzf --zsh)"
 
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# fnm
+export PATH="/Users/hrq/Library/Application Support/fnm:$PATH"
+eval "`fnm env`"
+export PATH="/usr/local/opt/openjdk@17/bin:$PATH"

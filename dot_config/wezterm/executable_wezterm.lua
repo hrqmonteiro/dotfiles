@@ -20,20 +20,21 @@ local wezterm = require 'wezterm'
 
 
 return {
-  color_scheme = "nord",
+  color_scheme = "Catppuccin Mocha",
   default_prog = tmux,
   enable_tab_bar = false,
   font = wezterm.font({
-    family = "Iosevka Nerd Font",
+    family = "Liga LXGWWenKaiMono Nerd Font",
+    weight = "DemiBold"
   }),
-  font_size = 15,
-  macos_window_background_blur = 70,
-  window_background_opacity = 1,
+  font_size = 21,
+  -- macos_window_background_blur = 70,
+  -- window_background_opacity = 0.85,
   window_padding = {
     left = 2,
     right = 2,
     top = 2,
     bottom = 2
   },
-  -- window_decorations = "RESIZE"
+  window_decorations = "RESIZE"
 }
