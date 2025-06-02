@@ -1,0 +1,4 @@
+alias vim="nvim"
+alias ls="eza --icons"
+
+export PATH="$HOME/.local/bin:$PATH"

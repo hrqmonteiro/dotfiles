@@ -1,0 +1,2 @@
+-- :fennel:1748873258
+return {completion = {"blink", "telescope"}, editor = {"tangerine"}, lang = {"go", "go.+templ", "tailwindcss", "typescript", "typescript.+eslint", "typescript.+vue"}, lsp = {"lspconfig"}, ui = {"colorscheme", "lualine", "mini-icons", "navic"}}
